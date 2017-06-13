@@ -173,19 +173,19 @@ Exists as an abstraction of hardware and memory architectures.
 -  **Queues**: A coarse-grained lock instead of a fine-grained locking model 
 
 	- **Queue** Classes
-	- class queue.Queue
-	- class queue.LifoQueue
-	- class queue.PriorityQueue -> sorted(list(entries))[0])
+		- class queue.Queue
+		- class queue.LifoQueue
+		- class queue.PriorityQueue -> sorted(list(entries))[0])
 
 	- **Queue** functions
-	- Queue.put(item, block=True, timeout=None)
-	- Queue.get(block=True, timeout=None)
-	- Queue.put_nowait(item)
-	- Queue.get_nowait()
-	- Queue.join()
-	- Queue.qsize()
-	- Queue.empty()
-	- Queue.full()
+		- Queue.put(item, block=True, timeout=None)
+		- Queue.get(block=True, timeout=None)
+		- Queue.put_nowait(item)
+		- Queue.get_nowait()
+		- Queue.join()
+		- Queue.qsize()
+		- Queue.empty()
+		- Queue.full()
 
 > Full and awesome official documentation about Python Queues
 > [https://docs.python.org/3/library/queue.html](https://docs.python.org/3/library/queue.html)
@@ -193,6 +193,11 @@ Exists as an abstraction of hardware and memory architectures.
 ## The BIG problem: GIL (Global Interpreter Locker)
 
 The Python language was designed to use a locker system called GIL that causes lots of problems when you try to run REAL parallel code in Python. In some cases even when you use threads your code isn't parralel because this *feature*.  Here is a good reference to read about this problem.
+
+### It isn't a truly free-threaded interpreter ...
+
+> Any free threaded solution that retains the reference counting GC will still need a global threads in the CPython runtime will mean updating the reference counts on a whole new working set of objects, almost certainly blowing the CPU cache and losing some of the speed benefits gained from making more effective use of multiple cores
+
 
 >[http://python-notes.curiousefficiency.org/en/latest/python3/multicore_python.html](http://python-notes.curiousefficiency.org/en/latest/python3/multicore_python.html) 
 
@@ -211,9 +216,6 @@ David Beazley is an american celebrity when the subject is Python, here you can 
 - https://github.com/google/grumpy (Compile to Go)
 - Apache Spark
 - http://pyparallel.org/
-
-- It isn't a truly free-threaded interpreter ...
-- any free threaded solution that retains the reference counting GC will still need a global threads in the CPython runtime will mean updating the reference counts on a whole new working set of objects, almost certainly blowing the CPU cache and losing some of the speed benefits gained from making more effective use of multiple cores
 
 # Next Topics (part 2)
 
