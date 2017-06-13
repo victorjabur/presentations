@@ -1,6 +1,6 @@
-#Parallelism in Python
+# Parallelism in Python
 
-##Why parallelism?
+## Why parallelism?
 To solve large problems in a relatively short time
 
 ## Four Types of Machine's Architecture
