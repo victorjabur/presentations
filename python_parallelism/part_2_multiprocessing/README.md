@@ -20,7 +20,7 @@
 - **Easier** to turn into a **distributed** application
 - Most part of the time, they are **faster than threads** in Python, **because the GIL** problem
 
-![](/home/jabur/app/github/presentations/python_parallelism/part_2_multiprocessing/images/process_threads.png)
+![](images/process_threads.png)
 
 ## Multiprocessing Module
 
@@ -39,7 +39,7 @@
 - It **allows** data/memory sharing
 - It is a great **alternative** to step aside the **GIL** problem
 
-![](/home/jabur/app/github/presentations/python_parallelism/part_2_multiprocessing/images/multiprocessing_scheme.png)
+![](images/multiprocessing_scheme.png)
 
 ### Supported ways of Communication
 
@@ -51,7 +51,7 @@
 	- It is thread and process safe
 	- The **multiprocessing Queue** is a **clone** of traditional **Queue.queue**
 	
-![](/home/jabur/app/github/presentations/python_parallelism/part_2_multiprocessing/images/queue.png) 
+![](images/queue.png) 
 	
 - **Pipes**
 	- [https://docs.python.org/3.7/library/multiprocessing.html#multiprocessing.Pipe](https://docs.python.org/3.7/library/multiprocessing.html#multiprocessing.Pipe)
@@ -66,7 +66,7 @@
 **Pipes in a Linux Shell Command**
 In the following picture, you can see pipes in action inside the Linux when you type a command like this: "tail -f access.log | cut -d'' -f1 | uniq"
 
-![](/home/jabur/app/github/presentations/python_parallelism/part_2_multiprocessing/images/linux_pipe.png) 
+![](images/linux_pipe.png) 
 
 ## Reference Links
 
@@ -97,4 +97,4 @@ Here are some topics covered in this presentation:
 - Async/await syntax for native coroutines in Python 3.5 (Part 5)
 
 ## Take a Time for Reflection
-![](/home/jabur/app/github/presentations/python_parallelism/part_2_multiprocessing/images/cartoon_reflection.png) 
+![](images/cartoon_reflection.png) 
