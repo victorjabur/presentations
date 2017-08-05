@@ -1,0 +1,17 @@
+Pipe
+Sending 10000 numbers to Pipe() took 0.1220693588256836 seconds
+Sending 100000 numbers to Pipe() took 1.1704890727996826 seconds
+Sending 1000000 numbers to Pipe() took 12.41849970817566 seconds
+Sending 10000000 numbers to Pipe() took 128.42628073692322 seconds
+
+Queue
+Sending 10000 numbers to Queue() took 0.20291543006896973 seconds
+Sending 100000 numbers to Queue() took 1.9920125007629395 seconds
+Sending 1000000 numbers to Queue() took 21.45357322692871 seconds
+Sending 10000000 numbers to Queue() took 191.60678577423096 seconds
+
+JoinableQueue
+Sending 10000 numbers to JoinableQueue() took 0.3158605098724365 seconds
+Sending 100000 numbers to JoinableQueue() took 2.527496576309204 seconds
+Sending 1000000 numbers to JoinableQueue() took 22.346463203430176 seconds
+Sending 10000000 numbers to JoinableQueue() took 237.0165991783142 seconds

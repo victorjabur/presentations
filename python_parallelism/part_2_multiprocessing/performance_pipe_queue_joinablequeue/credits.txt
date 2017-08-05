@@ -1,0 +1,5 @@
+Mike Pennington
+11/12/2011
+https://stackoverflow.com/users/667301/mike-pennington
+
+https://stackoverflow.com/questions/8463008/python-multiprocessing-pipe-vs-queue
