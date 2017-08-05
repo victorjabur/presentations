@@ -86,11 +86,12 @@ In the following picture, you can see pipes in action inside the Linux when you 
 
 ## Parts of this Presentation
 
-Here are some topics that will be addressed in Part 3 of this presentation: 
+Here are some topics covered in this presentation: 
 
 - Threads and Native Lockings (Part 1)
-	- [https://github.com/victorjabur/presentations/tree/master/python_parallelism/part_1](https://github.com/victorjabur/presentations/tree/master/python_parallelism/part_1)
-- Processes and Multiprocessing Module (Part 2 this)
+	- [https://github.com/victorjabur/presentations/tree/master/python_parallelism/part_1_threads](https://github.com/victorjabur/presentations/tree/master/python_parallelism/part_1_threads)
+- Processes and Multiprocessing Module (Part 2)
+	- [https://github.com/victorjabur/presentations/tree/master/python_parallelism/part_2_multiprocessing](https://github.com/victorjabur/presentations/tree/master/python_parallelism/part_2_multiprocessing)
 - Concurrent.futures module in Python 3.2 (Part 3)
 - Asyncio module in Python 3.4 (Part 4)
 - Async/await syntax for native coroutines in Python 3.5 (Part 5)
