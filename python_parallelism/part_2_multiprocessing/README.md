@@ -60,7 +60,8 @@
 	- The pipe could be used in a **Linux shell**, like this: **cat foobar | wc -l**
 	- It returns a pair of connection objects connected by a pipe which by default is duplex (two-way)
 	- **It can only have two endpoints** - One of them should be used for read while the another for write in order to avoid risk of corruption
-	- **Faster** than queues
+	- **Faster** than queues - See the following benchmarking
+		- [https://github.com/victorjabur/presentations/blob/master/python_parallelism/part_2_multiprocessing/performance_pipe_queue_joinablequeue/results.txt](https://github.com/victorjabur/presentations/blob/master/python_parallelism/part_2_multiprocessing/performance_pipe_queue_joinablequeue/results.txt)
 	- You can send and receive Python objects (they will be serialized using pickle) using the communication channel
 
 **Pipes in a Linux Shell Command**
