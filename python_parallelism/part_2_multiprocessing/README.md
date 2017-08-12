@@ -69,6 +69,81 @@ In the following picture, you can see pipes in action inside the Linux when you 
 
 ![](images/linux_pipe.png) 
 
+## Pool Class
+
+ Pool object offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). 
+ 
+ A process pool object which controls a pool of worker processes to which jobs can be submitted. It supports asynchronous results with timeouts and callbacks and has a parallel map implementation.
+ 
+- **Function  Options:**
+	- **apply(func[, args[, kwds]])**
+		- It blocks until the result is ready
+		- Worker function is executed in one of the workers of the pool
+		- The worker function runs in another proccess
+		- It is not concurrent :-(
+		
+	- **apply_async(func[, args[, kwds[, callback[, error_callback]]]])**
+		- Variant of apply
+		- It returns a result object
+		- Accepts the callback() and error_callback() functions to receive results
+		- Concurrent :-)
+		- Callback blocks the execution of workers, so make it simple (if used)
+		- The result is a proxy of class multiprocessing.pool.AsyncResult -> get() / wait() / ready() / succesful()
+		
+	- **map(func, iterable[, chunksize])**
+		- It is a parallel equivalent of the map() function
+		- It supports only one iterable argument
+		- It blocks until the result is ready
+		- The return is a list with all the results :-()
+		- The chuncksize will be calculated automatically using an internal formula, in case you don't set it
+
+	- **map_async(func, iterable[, chunksize[, callback[, error_callback]]])**
+		- A parallel equivalent of map
+		- It returns a result object
+		- Accepts the callback() and error_callback() functions to receive results
+		- Concurrent :-)
+		- Callback blocks the execution of workers, so make it simple (if used)		
+		- The result is a proxy of class multiprocessing.pool.AsyncResult -> get() / wait() / ready() / succesful()
+	
+	- **imap(func, iterable[, chunksize])**
+		- A lazier version of map
+		- For long iterables, please increase your chunksize
+		- The result is an iterator which means the result comes to you gradually
+		- The chuncksize will be set to 1, in case you don't set it
+	
+	- **imap_unordered(func, iterable[, chunksize])**
+		- All characteristcs from imap version is inherited
+		- You receive faster your results (processing time), but the total time will be almost the same
+		- It uses less memory than imap, because the faster results will go back to you as soon as possible, releasing the memory earlier
+		- If you need the pair (input, result) you need to return it from worker function, because the order is not respected
+	
+	- **starmap(func, iterable[, chunksize])**
+	
+	- **starmap_async(func, iterable[, chunksize[, callback[, error_back]]])**
+		- The result is a proxy of class multiprocessing.pool.AsyncResult -> get() / wait() / ready() / succesful()
+
+
+|   | multi-args  | concurrence   | blocking   | ordered-results   |
+|---|---|---|---|---|
+| apply                   | yes  | no     | yes  | no   |
+| apply_async        | yes  | yes   | no    | no   |
+| map                     | no    | yes   | yes  | yes   |
+| map_async          | no    | yes   | no    | yes   |
+| imap                    | no    | yes    | no   | yes   |
+| imap_unordered  | no    |  yes   | no   | no   |
+| starmap               | yes  | yes    | yes  | yes   |
+| starmap_async    | yes  |  yes   | no   | yes   |
+
+- More info about the class multiprocessing.pool.AsyncResult:
+	- get() - returns the result if available / otherwise blocks until ready()
+		- To avoid unwanted block you can use get(timeout=5) which will raise an exception multiprocessing.TimeoutError
+	- wait() - blocks until the result is ready() but accept the timeout as well
+	- succesful() tells you that te execution was ok
+
+- How to pass multiple parameters to your worker function
+	- from functools import partial
+	- func = partial(worker_func, kit_fat)
+
 ## Reference Links
 
 - Take a look at the Official Documentation here:
