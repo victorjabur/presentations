@@ -41,6 +41,14 @@
 
 ![](images/multiprocessing_scheme.png)
 
+### Work with Proccesses or Threads
+
+- multiprocessing.pool.ThreadPool
+	- For threads
+- multiprocessing.pool.Pool
+	- For processes
+
+
 ### Supported ways of Communication
 
 - **Queues**
