@@ -167,6 +167,12 @@ In the following picture, you can see pipes in action inside the Linux when you 
 - Book: Python Parallel Programming Cookbook
 	- Master efficient parallel programming to build powerful applications using Python
 	[https://www.packtpub.com/application-development/python-parallel-programming-cookbook](https://www.packtpub.com/application-development/python-parallel-programming-cookbook)
+	- Concurrent and Parallel Programming in Python - Part 1
+	[https://blog.sopticek.net/2017/05/13/concurrent-and-parallel-programming-in-python-part-1/](https://blog.sopticek.net/2017/05/13/concurrent-and-parallel-programming-in-python-part-1/)
+	- Concurrent and Parallel Programming in Python - Part 2
+	[https://blog.sopticek.net/2017/06/03/concurrent-and-parallel-programming-in-python-part-2/](https://blog.sopticek.net/2017/06/03/concurrent-and-parallel-programming-in-python-part-2/)
+	- Python multiprocessing.Pool: Difference between map, apply, map_async, apply_async
+	[http://blog.shenwei.me/python-multiprocessing-pool-difference-between-map-apply-map_async-apply_async/](http://blog.shenwei.me/python-multiprocessing-pool-difference-between-map-apply-map_async-apply_async/)
 
 ## Parts of this Presentation
 
